@@ -78,6 +78,7 @@ public class LoginActivity extends AppCompatActivity{
         userDAO.open();
         String role = userDAO.login(username,password);
         long id = userDAO.getUserIdByPassword(username,password);
+        userDAO.close();
         if(role != null){
             if(role.equals("student")){
                 // 登录学生
