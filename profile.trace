@@ -1,0 +1,132 @@
+*version
+3
+data-file-overflow=false
+clock=dual
+elapsed-time-usec=21587298
+num-method-calls=364
+clock-call-overhead-nsec=780
+vm=art
+pid=20152
+*threads
+1	main
+2	HeapTaskDaemon
+3	ReferenceQueueDaemon
+4	FinalizerWatchdogDaemon
+5	FinalizerDaemon
+6	SurfaceSyncGroupTimer
+7	binder:20152_1
+*methods
+0x1ac	android.os.Parcel	recycle	()V	Parcel.java
+0x1a0	java.lang.ThreadLocal	set	(Ljava/lang/Object;)V	ThreadLocal.java
+0x19c	android.os.StrictMode	clearGatheredViolations	()V	StrictMode.java
+0x190	android.os.Message	isInUse	()Z	Message.java
+0x18c	android.os.MessageQueue	enqueueMessage	(Landroid/os/Message;J)Z	MessageQueue.java
+0x188	android.os.ThreadLocalWorkSource	getUid	()I	ThreadLocalWorkSource.java
+0x184	android.os.Handler	enqueueMessage	(Landroid/os/MessageQueue;Landroid/os/Message;J)Z	Handler.java
+0x178	android.os.Handler	sendMessage	(Landroid/os/Message;)Z	Handler.java
+0x180	android.os.Handler	sendMessageAtTime	(Landroid/os/Message;J)Z	Handler.java
+0x170	android.app.ActivityThread	sendMessage	(ILjava/lang/Object;IIZ)V	ActivityThread.java
+0x16c	android.app.ActivityThread	sendMessage	(ILjava/lang/Object;II)V	ActivityThread.java
+0x168	android.app.ActivityThread	-$$Nest$msendMessage	(Landroid/app/ActivityThread;ILjava/lang/Object;II)V	ActivityThread.java
+0x164	android.app.ActivityThread$ApplicationThread	profilerControl	(ZLandroid/app/ProfilerInfo;I)V	ActivityThread.java
+0x154	android.os.Parcel	readTypedObject	(Landroid/os/Parcelable$Creator;)Ljava/lang/Object;	Parcel.java
+0x140	android.os.Parcel	enforceInterface	(Ljava/lang/String;)V	Parcel.java
+0x12c	android.os.Binder	execTransactInternal	(ILandroid/os/Parcel;Landroid/os/Parcel;II)Z	Binder.java
+0xf4	java.lang.Object	wait	()V	Object.java
+0x120	android.os.Parcel	isForRpc	()Z	Parcel.java
+0x11c	android.os.Parcel	init	(J)V	Parcel.java
+0x118	android.os.Parcel	obtain	(J)Landroid/os/Parcel;	Parcel.java
+0x114	android.os.Binder	execTransact	(IJJI)Z	Binder.java
+0x108	java.lang.Daemons$FinalizerDaemon	runInternal	()V	Daemons.java
+0x100	java.lang.Daemons$FinalizerWatchdogDaemon	runInternal	()V	Daemons.java
+0xfc	java.lang.Object	wait	(JI)V	Object.java
+0x174	android.os.Message	obtain	()Landroid/os/Message;	Message.java
+0x128	android.os.Binder	getCallingUid	()I	Binder.java
+0xf0	java.lang.Daemons$ReferenceQueueDaemon	runInternal	()V	Daemons.java
+0x104	java.lang.Daemons$FinalizerWatchdogDaemon	sleepUntilNeeded	()Z	Daemons.java
+0xec	dalvik.system.VMRuntime	runHeapTasks	()V	VMRuntime.java
+0xe4	java.lang.Daemons$Daemon	run	()V	Daemons.java
+0x130	android.os.Trace	isTagEnabled	(J)Z	Trace.java
+0xe0	java.lang.Thread	run	()V	Thread.java
+0x194	android.os.MessageQueue	nativeWake	(J)V	MessageQueue.java
+0xdc	dalvik.system.VMDebug	stopMethodTracing	()V	VMDebug.java
+0xd8	android.os.Debug	stopMethodTracing	()V	Debug.java
+0x144	android.os.Parcel	nativeEnforceInterface	(JLjava/lang/String;)V	Parcel.java
+0xd4	android.app.ActivityThread$Profiler	stopProfiling	()V	ActivityThread.java
+0x1b4	android.os.Parcel	resetSqaushingState	()V	Parcel.java
+0xcc	android.os.ThreadLocalWorkSource	getToken	()J	ThreadLocalWorkSource.java
+0x8c	java.lang.ThreadLocal$ThreadLocalMap	-$$Nest$mgetEntry	(Ljava/lang/ThreadLocal$ThreadLocalMap;Ljava/lang/ThreadLocal;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry;	ThreadLocal.java
+0xc8	android.os.ThreadLocalWorkSource	setUid	(I)J	ThreadLocalWorkSource.java
+0xc0	android.os.Message	markInUse	()V	Message.java
+0xd0	android.app.ActivityThread	handleProfilerControl	(ZLandroid/app/ProfilerInfo;I)V	ActivityThread.java
+0xbc	android.os.Binder	flushPendingCommands	()V	Binder.java
+0x10	android.os.Looper	loopOnce	(Landroid/os/Looper;JI)Z	Looper.java
+0x150	android.os.Parcel	nativeReadInt	(J)I	Parcel.java
+0x4	java.lang.reflect.Method	invoke	(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;	Method.java
+0xc4	android.os.Message	isAsynchronous	()Z	Message.java
+0x1a4	java.lang.ThreadLocal$ThreadLocalMap	-$$Nest$mset	(Ljava/lang/ThreadLocal$ThreadLocalMap;Ljava/lang/ThreadLocal;Ljava/lang/Object;)V	ThreadLocal.java
+0xac	android.os.MessageQueue	next	()Landroid/os/Message;	MessageQueue.java
+0x8	android.app.ActivityThread	main	([Ljava/lang/String;)V	ActivityThread.java
+0xa8	android.os.Message	recycleUnchecked	()V	Message.java
+0xb4	android.os.SystemClock	uptimeMillis	()J	SystemClock.java
+0x70	java.io.FileDescriptor	setInt$	(I)V	FileDescriptor.java
+0xa0	android.os.ThreadLocalWorkSource	parseUidFromToken	(J)I	ThreadLocalWorkSource.java
+0x74	java.io.FileDescriptor	getOwnerId$	()J	FileDescriptor.java
+0x98	java.lang.ref.Reference	refersTo	(Ljava/lang/Object;)Z	Reference.java
+0x9c	java.lang.ref.Reference	refersTo0	(Ljava/lang/Object;)Z	Reference.java
+0x94	java.lang.ThreadLocal	-$$Nest$fgetthreadLocalHashCode	(Ljava/lang/ThreadLocal;)I	ThreadLocal.java
+0x134	android.os.Trace	nativeIsTagEnabled	(J)Z	Trace.java
+0x64	java.io.FileDescriptor	isSocket$	()Z	FileDescriptor.java
+0x198	android.os.Binder	checkParcel	(Landroid/os/IBinder;ILandroid/os/Parcel;Ljava/lang/String;)V	Binder.java
+0x5c	libcore.io.ForwardingOs	close	(Ljava/io/FileDescriptor;)V	ForwardingOs.java
+0x90	java.lang.ThreadLocal$ThreadLocalMap	getEntry	(Ljava/lang/ThreadLocal;)Ljava/lang/ThreadLocal$ThreadLocalMap$Entry;	ThreadLocal.java
+0x158	android.os.Parcel	enforceNoDataAvail	()V	Parcel.java
+0x17c	android.os.Handler	sendMessageDelayed	(Landroid/os/Message;J)Z	Handler.java
+0x58	libcore.io.AsynchronousCloseMonitor	signalBlockedThreads	(Ljava/io/FileDescriptor;)V	AsynchronousCloseMonitor.java
+0	com.android.internal.os.RuntimeInit$MethodAndArgsCaller	run	()V	RuntimeInit.java
+0x80	java.lang.ThreadLocal	get	()Ljava/lang/Object;	ThreadLocal.java
+0x68	java.io.FileDescriptor	isSocket	(I)Z	FileDescriptor.java
+0x138	android.app.IApplicationThread$Stub	getMaxTransactionId	()I	IApplicationThread.java
+0x18	android.app.ActivityThread$H	handleMessage	(Landroid/os/Message;)V	ActivityThread.java
+0xf8	java.lang.Object	wait	(J)V	Object.java
+0xa4	android.os.Binder	clearCallingIdentity	()J	Binder.java
+0x6c	libcore.io.Linux	close	(Ljava/io/FileDescriptor;)V	Linux.java
+0xb0	android.os.MessageQueue	nativePollOnce	(JI)V	MessageQueue.java
+0x60	libcore.io.BlockGuardOs	close	(Ljava/io/FileDescriptor;)V	BlockGuardOs.java
+0x1a8	java.lang.ThreadLocal$ThreadLocalMap	set	(Ljava/lang/ThreadLocal;Ljava/lang/Object;)V	ThreadLocal.java
+0x54	java.io.FileDescriptor	valid	()Z	FileDescriptor.java
+0x10c	java.lang.ref.ReferenceQueue	remove	()Ljava/lang/ref/Reference;	ReferenceQueue.java
+0x3c	libcore.io.IoUtils	closeQuietly	(Ljava/io/FileDescriptor;)V	IoUtils.java
+0x24	android.os.ParcelFileDescriptor	close	()V	ParcelFileDescriptor.java
+0x124	android.os.Parcel	nativeIsForRpc	(J)Z	Parcel.java
+0x1b8	android.os.HandlerThread	run	()V	HandlerThread.java
+0x38	android.os.ParcelFileDescriptor	closeInternal	(Ljava/io/FileDescriptor;)V	ParcelFileDescriptor.java
+0x48	java.io.FileDescriptor	release$	()Ljava/io/FileDescriptor;	FileDescriptor.java
+0x40	libcore.io.IoUtils	close	(Ljava/io/FileDescriptor;)V	IoUtils.java
+0x110	java.lang.ref.ReferenceQueue	remove	(J)Ljava/lang/ref/Reference;	ReferenceQueue.java
+0x160	android.os.Parcel	nativeDataAvail	(J)I	Parcel.java
+0x28	android.os.ParcelFileDescriptor	closeWithStatus	(ILjava/lang/String;)V	ParcelFileDescriptor.java
+0x148	android.os.Parcel	readBoolean	()Z	Parcel.java
+0x34	android.os.ParcelFileDescriptor	writeCommStatusAndClose	(ILjava/lang/String;)V	ParcelFileDescriptor.java
+0x2c	android.util.CloseGuard	close	()V	CloseGuard.java
+0x14	android.os.Handler	dispatchMessage	(Landroid/os/Message;)V	Handler.java
+0x78	android.os.ParcelFileDescriptor	releaseResources	()V	ParcelFileDescriptor.java
+0x30	dalvik.system.CloseGuard	close	()V	CloseGuard.java
+0x13c	android.app.IApplicationThread$Stub	onTransact	(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z	IApplicationThread.java
+0xc	android.os.Looper	loop	()V	Looper.java
+0xe8	java.lang.Daemons$HeapTaskDaemon	runInternal	()V	Daemons.java
+0x20	android.app.ProfilerInfo	closeFd	()V	ProfilerInfo.java
+0x84	java.lang.Thread	currentThread	()Ljava/lang/Thread;	Thread.java
+0x15c	android.os.Parcel	dataAvail	()I	Parcel.java
+0x50	java.lang.Object	<init>	()V	Object.java
+0x14c	android.os.Parcel	readInt	()I	Parcel.java
+0x1b0	android.os.Parcel	freeBuffer	()V	Parcel.java
+0x1c	dalvik.system.VMDebug	startMethodTracingFd	(Ljava/lang/String;IIIZIZ)V	VMDebug.java
+0x7c	android.os.ThreadLocalWorkSource	restore	(J)V	ThreadLocalWorkSource.java
+0x88	java.lang.ThreadLocal	getMap	(Ljava/lang/Thread;)Ljava/lang/ThreadLocal$ThreadLocalMap;	ThreadLocal.java
+0x4c	java.io.FileDescriptor	<init>	()V	FileDescriptor.java
+0x44	libcore.io.IoBridge	closeAndSignalBlockedThreads	(Ljava/io/FileDescriptor;)V	IoBridge.java
+0xb8	java.util.ArrayList	size	()I	ArrayList.java
+*end
+SLOW   Ÿ¯_                           E1         R1         T1         U1         V1         W1         X1         Y1      ñ   ﬁ1       §   Ï1   $   ¨   Ù1   (   ≠   ˆ1   ,   Ø   ˜1   0   ±   ˘1   1   ≤   ˚1   -   ¥   ˝1   4   ∂   ˇ1   5   ∏    2   8   π   2   <   ª   2   @   º   2   D   Ω   2   H   ø   2   L   ¡   
+2   P   ¬   2   Q   ƒ   2   P   ∆   2   Q   «   2   M   »   2   I   À   2   T   Õ   2   U   œ   2   X   —   2   Y   „   -2   \   Ê   02   `   Ë   22   d   Í   42   h   Ï   62   i   Ò   ;2   e   Ú   <2   \   Ù   >2   l   ˆ   @2   p   ˇ   J2   q     K2   t     P2   u     Q2   m     V2   ]     X2   a     Y2   ]     [2   E     \2   A     ^2   =     _2   9     a2   x     c2   y     d2   )     e2   %     g2   !     j2      "  m2      %  p2   |   '  r2   Ä   )  t2   Ñ   +  v2   Ö   /  {2   à   1  |2   â   3  ~2   å   4  2   ê   6  Å2   î   7  É2   ï   9  Ö2   ò   <  à2   ú   >  ä2   ù   ?  ã2   ô   A  ç2   ë   C  é2   ç   D  ê2   Å   F  í2   †   G  ì2   °   I  ï2   }   K  ó2   §   M  ô2   •   R  ü2   ®   T  †2   ©   V  ¢2      W  §2      Z  ß2   ¨   \  ©2   ∞   ^  ™2   ±   h  ¥2   ¥   k  ∏2   µ   y  ∆2   ∏   |  …2   π   }   2   º   Ä  Õ2   Ω   Ç  œ2   ∞   É  –2   ±   B  NÜH ¥   E  QÜH µ   H  TÜH ¿   W  cÜH ¡   X  dÜH ƒ   Z  fÜH ≈   [  gÜH ≠   ]  iÜH »   _  kÜH Ã   `  lÜH Ä   b  nÜH Ñ   c  oÜH Ö   e  rÜH à   g  sÜH â   h  tÜH å   i  vÜH ê   k  wÜH î   l  xÜH ï   m  zÜH ò   p  |ÜH ú   q  ~ÜH ù   s  ÜH ô   t  ÄÜH ë   u  ÇÜH ç   w  ÉÜH Å   x  ÑÜH Õ   y  ÜÜH Ä   {  áÜH Ñ   |  âÜH Ö   ~  äÜH à     åÜH â   Ä  çÜH å   Å  éÜH ê   Ç  èÜH î   Ñ  êÜH ï   Ö  íÜH ò   á  ìÜH ú   à  ïÜH ù   â  ñÜH ô   ã  òÜH ë   å  ôÜH ç   ç  öÜH Å   è  úÜH …   ê  ùÜH    í  üÜH    î  °ÜH –   ñ  £ÜH ‘   ü  ¨ÜH ÿ   ∂  ƒÜH ‹   ø  ÕÜH ‡       a1   ‰       e1   Ë       f1   Ï       h1   ‡       k1   ‰       q1          r1   Ù       s1   ¯       u1   ¸       v1   ‡       y1   ‰       1          Ä1         Å1   Ù       Ç1   ¯       É1   ¸       Ñ1   ‡       à1   ‰       å1         ç1         é1         ê1   ¯       ë1   ¸       í1         ÒÉH      ˛ÉH       ÑH      ÑH      ÑH      ÑH      ÑH      	ÑH      ÑH       ÑH $     ÑH %  !   ÑH !  #   ÑH (  $   ÑH )  &   ÑH »   (   ÑH Ã   *   ÑH Ä   ,   ÑH Ñ   0   "ÑH Ö   5   'ÑH à   6   (ÑH â   8   *ÑH å   :   ,ÑH ê   ;   -ÑH î   =   /ÑH ï   ?   1ÑH ò   C   5ÑH ú   G   9ÑH ù   I   ;ÑH ô   L   >ÑH ë   M   @ÑH ç   O   AÑH Å   Q   CÑH Õ   S   EÑH Ä   T   GÑH Ñ   V   HÑH Ö   W   JÑH à   X   KÑH â   Z   LÑH å   [   NÑH ê   \   OÑH î   ]   PÑH ï   _   QÑH ò   `   SÑH ú   b   UÑH ù   c   VÑH ô   d   WÑH ë   f   YÑH ç   g   ZÑH Å   h   [ÑH …   j   ]ÑH ,  k   ^ÑH 0  m   aÑH 4  o   bÑH 5  r   fÑH 1  t   gÑH 8  u   iÑH 9  x   lÑH <  z   mÑH @  {   oÑH D  }   pÑH E  à   |ÑH A  ä   ~ÑH H  å   ÄÑH L  é   ÇÑH P  ê   ÑÑH Q  ë   ÖÑH M  ì   áÑH I  î   àÑH T  ñ   äÑH L  ó   ãÑH P  ô   çÑH Q  ö   éÑH M  õ   èÑH U  ù   íÑH L  ü   ìÑH P  †   îÑH Q  °   ñÑH M  £   óÑH X  ß   õÑH \  ©   ùÑH `  ™   üÑH a  ´   †ÑH ]  ≠   °ÑH Y  Æ   £ÑH d  ≤   ¶ÑH h  π   ÆÑH l  ª   ∞ÑH p  º   ±ÑH t  æ   ≥ÑH u  ¿   µÑH x  ¬   ∑ÑH |  ƒ   πÑH ¥   ∆   ªÑH µ   ›   ”ÑH Ä  ﬂ   ‘ÑH Ñ  ‡   ÷ÑH à  ·   ◊ÑH Ä   „   ŸÑH Ñ   ‰   ⁄ÑH Ö   Ê   ‹ÑH à   Á   ›ÑH â   Ë   ﬁÑH å   Í   ‡ÑH ê   Î   ·ÑH î   Ï   ‚ÑH ï   Ì   „ÑH ò   Ô   ÂÑH ú     ˛ÑH ù   	   ÖH ô     ÖH ë     ÖH ç     ÖH Å     ÖH â    ÖH å    	ÖH ê    ÖH ë    ÖH ¿     ÖH ¡     ÖH ƒ     ÖH ≈     ÖH î    ÖH ï  (  ÖH ç  *  !ÖH Ö  +  #ÖH Å  -  $ÖH }  .  %ÖH y  /  'ÖH q  1  )ÖH m  3  *ÖH i  4  ,ÖH e  6  .ÖH =  8  0ÖH ò  :  2ÖH ô  <  3ÖH ú  =  5ÖH †  @  7ÖH Ñ   A  9ÖH Ö   C  ;ÖH à   D  <ÖH â   F  >ÖH §  G  ?ÖH ®  I  AÖH î   J  BÖH ï   K  CÖH ò   M  EÖH ú   O  GÖH ù   P  HÖH ô   Q  JÖH ©  S  LÖH •  U  MÖH °  V  OÖH ù  X  PÖH -  Y  QÖH ¨  Z  SÖH ∞  \  TÖH ¥  ]  VÖH µ  _  WÖH ±  a  ZÖH ≠  b  [ÖH ¨  d  \ÖH ∞  e  ^ÖH ¥  f  _ÖH µ  g  `ÖH ±  i  aÖH ≠  j  cÖH |   k  dÖH Ä   m  eÖH Ñ   n  gÖH Ö   p  iÖH à   t  mÖH â   u  nÖH å   v  oÖH ê   w  qÖH î   y  rÖH ï   z  sÖH ò   |  uÖH ú   }  vÖH ù   ~  xÖH ô   Ä  yÖH ë   Å  {ÖH ç   Ç  |ÖH Å   Ñ  }ÖH †   Ö  ÖH °   Ü  ÄÖH }   à  ÅÖH   â  ÉÖH ∏      ñ1          õ1          ú1   ¨       ù1   ∞       û1  
