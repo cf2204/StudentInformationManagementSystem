@@ -1,38 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.LoginActivity"
-    android:orientation="vertical">
+    android:id="@+id/main"
+    android:background="@color/white"
+    tools:context=".activity.LoginActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Student">
-        </Button>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
+        android:text="@string/loginActivityTitle"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp" />
+
+    <!-- 用户名输入框 -->
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Teacher">
-        </Button>
-    </LinearLayout>
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="50dp"
+        android:hint="@string/suerNameSign"
+        android:inputType="text"
+        android:padding="16dp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- 密码输入框 -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/passwordSign"
+        android:inputType="textPassword"
+        android:padding="16dp"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/usernameEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- 登录按钮 -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/loginSign"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/blue"
+        android:padding="16dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
