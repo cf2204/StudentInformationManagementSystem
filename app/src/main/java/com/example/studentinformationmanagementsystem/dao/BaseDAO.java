@@ -2,8 +2,6 @@ package com.example.studentinformationmanagementsystem.dao;
 
 import android.database.Cursor;
 
-import com.example.studentinformationmanagementsystem.entity.Course;
-
 import java.util.List;
 
 public interface BaseDAO<T> {

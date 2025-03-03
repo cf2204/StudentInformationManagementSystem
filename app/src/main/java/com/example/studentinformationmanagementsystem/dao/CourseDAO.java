@@ -8,7 +8,6 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.studentinformationmanagementsystem.entity.Course;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class CourseDAO implements BaseDAO<Course> {
