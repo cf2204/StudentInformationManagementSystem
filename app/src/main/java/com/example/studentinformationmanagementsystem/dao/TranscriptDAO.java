@@ -5,11 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class EnrollmentDAO{
+public class TranscriptDAO {
     private DBHelper dbHelper;
     private SQLiteDatabase db;
 
-    public EnrollmentDAO(Context context) {
+    public TranscriptDAO(Context context) {
         dbHelper = new DBHelper(context);
     }
 
@@ -34,7 +34,7 @@ public class EnrollmentDAO{
         values.put("student_id", student_id);
         values.put("course_id", course_id);
         values.put("score", score);
-        return db.insert("Enrollment", null, values);
+        return db.insert("Transcript", null, values);
     }
 
     /**
@@ -48,7 +48,7 @@ public class EnrollmentDAO{
     public int update(long student_id,long course_id,String score) {
         ContentValues values = new ContentValues();
         values.put("score", score);
-        return db.update("Enrollment", values, "student_id=? AND course_id=?",
+        return db.update("Transcript", values, "student_id=? AND course_id=?",
                 new String[]{String.valueOf(student_id), String.valueOf(course_id)}
         );
     }
@@ -61,7 +61,7 @@ public class EnrollmentDAO{
      * @return 被删除的行数(>0则表示删除成功)
      */
     public int delete(long studentId, long courseId) {
-        return db.delete("Enrollment", "student_id=? AND course_id=?",
+        return db.delete("Transcript", "student_id=? AND course_id=?",
                 new String[]{String.valueOf(studentId), String.valueOf(courseId)}
         );
     }
@@ -76,7 +76,7 @@ public class EnrollmentDAO{
     public String findGradeByStudentAndCourse(long studentId, long courseId) {
         String score = null;
         Cursor cursor = db.rawQuery(
-                "SELECT grade FROM Enrollment " +
+                "SELECT grade FROM Transcript " +
                         "WHERE student_id = ? AND course_id = ?",
                 new String[]{String.valueOf(studentId), String.valueOf(courseId)}
         );
