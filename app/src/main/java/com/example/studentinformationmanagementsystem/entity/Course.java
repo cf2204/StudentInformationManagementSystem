@@ -6,6 +6,9 @@ public class Course {
     private int credit;       // 学分
     private long teacherId;   // 授课老师ID
 
+    // 新增字段：是否已选（不持久化到数据库）
+    private transient boolean selected;
+
     // 构造方法
     public Course() {}
 
@@ -47,5 +50,15 @@ public class Course {
 
     public void setTeacherId(long teacherId) {
         this.teacherId = teacherId;
+    }
+
+    // 已选状态判断方法
+    public boolean isSelected() {
+        return selected;
+    }
+
+    // 设置选课状态方法
+    public void setSelected(boolean selected) {
+        this.selected = selected;
     }
 }

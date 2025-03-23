@@ -130,7 +130,7 @@ public class CourseDAO implements BaseDAO<Course> {
         // 查询选课表，获取该学生选的课程ID
         Cursor cursor = db.rawQuery(
                 "SELECT c.* FROM Course c " +
-                        "INNER JOIN Enrollment e ON c.course_id = e.course_id " +
+                        "INNER JOIN Transcript e ON c.course_id = e.course_id " +
                         "WHERE e.student_id = ?", new String[]{String.valueOf(studentId)}
         );
 

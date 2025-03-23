@@ -16,7 +16,16 @@
             android:name=".activity.TeacherMainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.StudentMainActivity"
+            android:name=".activity.StudentActivity.StudentMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.StudentActivity.CourseSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.StudentActivity.GradeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.StudentActivity.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"

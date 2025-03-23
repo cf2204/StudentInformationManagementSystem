@@ -111,7 +111,7 @@ public class UserDAO {
             );
 
             if (cursor != null && cursor.moveToFirst()) {
-                int idIndex = cursor.getColumnIndex("teacher_id");
+                int idIndex = cursor.getColumnIndex("student_id");
                 if(idIndex >= 0){
                     return cursor.getLong(idIndex);
                 }

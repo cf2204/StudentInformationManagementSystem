@@ -9,4 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#2196F3</color>
     <color name="gray">#CCCCCC</color>
+    <color name="background_gray">#F5F5F5</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="grade_pass">#4CAF50</color> <!-- 绿色 -->
+    <color name="grade_fail">#F44336</color> <!-- 红色 -->
+    <color name="grade_unknown">#9E9E9E</color> <!-- 灰色 -->
+    <color name="primary_color">#3F51B5</color>
+
 </resources>
