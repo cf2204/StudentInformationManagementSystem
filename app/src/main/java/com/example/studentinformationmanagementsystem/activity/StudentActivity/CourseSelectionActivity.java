@@ -96,10 +96,9 @@ public class CourseSelectionActivity extends AppCompatActivity {
                 transcriptDAO.open();
 
                 List<Course> allCourses = courseDAO.findAll();
-                List<Course> enrolledCourses = courseDAO.findCoursesByStudentId(studentId);
 
                 for (Course course : allCourses) {
-                    course.setSelected(enrolledCourses.contains(course));
+                    course.setSelected(transcriptDAO.isCourseEnrolled(studentId,course.getCourseId()));
                 }
 
                 courseDAO.close();

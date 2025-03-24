@@ -46,7 +46,7 @@
         <Button
             android:id="@+id/btn_export"
             style="@style/FunctionButton"
-            android:text="数据导出"/>
+            android:text="成绩导出"/>
 
     </LinearLayout>
 

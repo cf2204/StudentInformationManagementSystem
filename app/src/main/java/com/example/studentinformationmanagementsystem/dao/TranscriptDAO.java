@@ -76,7 +76,7 @@ public class TranscriptDAO {
     public String findGradeByStudentAndCourse(long studentId, long courseId) {
         String score = null;
         Cursor cursor = db.rawQuery(
-                "SELECT grade FROM Transcript " +
+                "SELECT score FROM Transcript " +
                         "WHERE student_id = ? AND course_id = ?",
                 new String[]{String.valueOf(studentId), String.valueOf(courseId)}
         );
@@ -92,5 +92,31 @@ public class TranscriptDAO {
         return score;
     }
 
+    /**
+     * 根据学生ID和课程ID检查是否选了课
+     *
+     * @param studentId 学生ID
+     * @param courseId  课程ID
+     * @return 如果选了课返回 true，否则返回 false
+     */
+    public boolean isCourseEnrolled(long studentId, long courseId) {
+        Cursor cursor = null;
+        try {
+            cursor = db.query(
+                    "Transcript",
+                    new String[]{"transcript_id"}, // 只需要查询一个字段
+                    "student_id = ? AND course_id = ?", // 条件
+                    new String[]{String.valueOf(studentId), String.valueOf(courseId)}, // 参数
+                    null, null, null
+            );
+
+            // 如果有数据，说明选了课
+            return cursor != null && cursor.getCount() > 0;
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
+    }
 
 }

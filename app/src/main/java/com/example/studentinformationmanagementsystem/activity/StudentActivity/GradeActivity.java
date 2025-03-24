@@ -3,6 +3,8 @@ package com.example.studentinformationmanagementsystem.activity.StudentActivity;
 import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,8 @@ import com.example.studentinformationmanagementsystem.entity.Course;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class GradeActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -55,9 +59,15 @@ public class GradeActivity extends AppCompatActivity {
 
     @SuppressLint("StaticFieldLeak")
     private void loadGradeData() {
-        new AsyncTask<Void, Void, List<courseGrade>>() {
+        // 创建一个单线程的线程池
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        // 创建一个主线程的 Handler
+        Handler handler = new Handler(Looper.getMainLooper());
+
+        executorService.execute(new Runnable() {
             @Override
-            protected List<courseGrade> doInBackground(Void... voids) {
+            public void run() {
+                // 在后台线程执行耗时操作
                 courseDAO.open();
                 transcriptDAO.open();
 
@@ -76,14 +86,16 @@ public class GradeActivity extends AppCompatActivity {
 
                 courseDAO.close();
                 transcriptDAO.close();
-                return grades;
-            }
 
-            @Override
-            protected void onPostExecute(List<courseGrade> grades) {
-                adapter.updateGrades(grades);
+                // 使用 Handler 将结果传递到主线程
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        adapter.updateGrades(grades); // 更新 UI
+                    }
+                });
             }
-        }.execute();
+        });
     }
 
     public static class CourseGrade {

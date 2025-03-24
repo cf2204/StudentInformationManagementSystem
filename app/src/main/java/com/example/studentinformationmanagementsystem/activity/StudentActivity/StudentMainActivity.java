@@ -1,7 +1,9 @@
 package com.example.studentinformationmanagementsystem.activity.StudentActivity;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -9,6 +11,8 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -16,11 +20,13 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.studentinformationmanagementsystem.R;
 import com.example.studentinformationmanagementsystem.dao.StudentDAO;
 import com.example.studentinformationmanagementsystem.entity.Student;
+import com.example.studentinformationmanagementsystem.util.GradeReportService;
 
 public class StudentMainActivity extends AppCompatActivity {
     private long student_id;
     private Student user;
     private StudentDAO studentDAO;
+    private GradeReportService gradeReportService;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -42,6 +48,7 @@ public class StudentMainActivity extends AppCompatActivity {
 
     private void initData() {
         studentDAO = new StudentDAO(this);
+        gradeReportService = new GradeReportService(this);
         student_id = getIntent().getLongExtra("student_id", 0);
 
         if (student_id > 0) {
@@ -91,9 +98,22 @@ public class StudentMainActivity extends AppCompatActivity {
         });
 
         // 导出数据
-        //findViewById(R.id.btn_export).setOnClickListener(v -> exportStudentData());
+        findViewById(R.id.btn_export).setOnClickListener(v -> exportStudentData());
     }
 
+    private void exportStudentData() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+        }
+        String filePath = gradeReportService.exportGradeReportToCSV(student_id);
+
+        if (filePath != null) {
+            Toast.makeText(this, "成绩单已导出至: " + filePath, Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(this, "导出成绩单失败", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 
     @Override
