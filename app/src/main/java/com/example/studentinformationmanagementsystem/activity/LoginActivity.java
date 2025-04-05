@@ -13,7 +13,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.studentinformationmanagementsystem.R;
-import com.example.studentinformationmanagementsystem.activity.StudentActivity.StudentMainActivity;
+import com.example.studentinformationmanagementsystem.activity.student.StudentMainActivity;
+import com.example.studentinformationmanagementsystem.activity.teacher.TeacherMainActivity;
 import com.example.studentinformationmanagementsystem.dao.*;
 
 public class LoginActivity extends AppCompatActivity{
@@ -88,7 +89,7 @@ public class LoginActivity extends AppCompatActivity{
             }else if(role.equals("teacher")){
                 //登录老师
                 // 创建 Intent，指定从 LoginActivity 跳转到 StudentActivity
-                Intent intent = new Intent(LoginActivity.this, StudentMainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, TeacherMainActivity.class);
                 // 传递老师id
                 intent.putExtra("teacher_id", id);
                 // 提示登录成功

@@ -120,8 +120,8 @@ public class StudentDAO implements BaseDAO<Student> {
         // 查询选课表，获取选了该课程的学生ID
         Cursor cursor = db.rawQuery(
                 "SELECT s.* FROM Student s " +
-                        "INNER JOIN Enrollment e ON s.student_id = e.student_id " +
-                        "WHERE e.course_id = ?", new String[]{String.valueOf(courseId)}
+                        "INNER JOIN Transcript t ON s.student_id = t.student_id " +
+                        "WHERE t.course_id = ?", new String[]{String.valueOf(courseId)}
         );
 
         studentList = ChangeToList(cursor);

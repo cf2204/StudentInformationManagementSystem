@@ -16,5 +16,10 @@
     <color name="grade_fail">#F44336</color> <!-- 红色 -->
     <color name="grade_unknown">#9E9E9E</color> <!-- 灰色 -->
     <color name="primary_color">#3F51B5</color>
+    <color name="primary_dark">#303F9F</color>
+    <color name="secondary_color">#FF9800</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="dark_gray">#616161</color>
+    <color name="red">#F44336</color>
 
 </resources>

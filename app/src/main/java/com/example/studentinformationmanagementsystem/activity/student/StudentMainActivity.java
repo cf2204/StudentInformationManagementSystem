@@ -1,4 +1,4 @@
-package com.example.studentinformationmanagementsystem.activity.StudentActivity;
+package com.example.studentinformationmanagementsystem.activity.student;
 
 import android.Manifest;
 import android.annotation.SuppressLint;

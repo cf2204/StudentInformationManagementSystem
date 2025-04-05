@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,19 +16,49 @@
         android:theme="@style/Theme.StudentInformationManagementSystem"
         tools:targetApi="31">
         <activity
-            android:name=".activity.TeacherMainActivity"
+            android:name=".activity.teacher.StudentCoursesActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.StudentActivity.StudentMainActivity"
+            android:name=".activity.teacher.EditStudentActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.StudentActivity.CourseSelectionActivity"
+            android:name=".activity.teacher.CourseStudentsActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.StudentActivity.GradeActivity"
+            android:name=".activity.teacher.ExportDataActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.StudentActivity.ProfileActivity"
+            android:name=".activity.teacher.ImportDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.teacher.CourseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.teacher.ManageCoursesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.teacher.AddStudentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.teacher.StudentDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.teacher.ManageStudentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.teacher.TeacherMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.student.StudentMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.student.CourseSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.student.GradeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.student.ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"

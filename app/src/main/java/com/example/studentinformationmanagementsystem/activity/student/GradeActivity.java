@@ -1,7 +1,6 @@
-package com.example.studentinformationmanagementsystem.activity.StudentActivity;
+package com.example.studentinformationmanagementsystem.activity.student;
 
 import android.annotation.SuppressLint;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;

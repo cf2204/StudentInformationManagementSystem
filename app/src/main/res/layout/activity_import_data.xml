@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数据导入"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="请选择CSV文件导入数据"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="支持导入学生、教师和课程数据"
+        android:textSize="14sp"
+        android:textColor="@color/dark_gray"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btn_select_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择文件"
+        android:textSize="18sp"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@color/white"
+        android:padding="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CSV文件格式说明:"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="学生: student,姓名,性别,出生日期,班级,专业,用户名,密码"
+        android:textSize="14sp"
+        android:textColor="@color/dark_gray"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="教师: teacher,姓名,部门,用户名,密码"
+        android:textSize="14sp"
+        android:textColor="@color/dark_gray"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="课程: course,课程名,学分,教师ID"
+        android:textSize="14sp"
+        android:textColor="@color/dark_gray"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>

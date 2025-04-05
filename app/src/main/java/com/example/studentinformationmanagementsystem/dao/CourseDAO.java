@@ -141,4 +141,21 @@ public class CourseDAO implements BaseDAO<Course> {
         return courseList;
     }
 
+    /**
+     * 根据教师ID获取教授的课程
+     * @param teacherId 教师ID
+     * @return 课程列表
+     */
+    public List<Course> findCoursesByTeacherId(long teacherId) {
+        List<Course> courseList;
+        Cursor cursor = db.query("Course", null, "teacher_id=?",
+                new String[]{String.valueOf(teacherId)}, null, null, null);
+
+        courseList = ChangeToList(cursor);
+        if(!cursor.isClosed()){
+            cursor.close();
+        }
+        return courseList;
+    }
+
 }
